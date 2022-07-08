@@ -2,7 +2,7 @@
 	<view>
 		<!-- 时间范围类型切换 -->
 		<view class="date-picker-header">
-			<button @click="toggleType(index)" v-for="(item,index) of timeRangeTypes" :class="{active:index === type}">{{ item }}</button>
+			<button :key="index" @click="toggleType(index)" v-for="(item,index) of timeRangeTypes" :class="{active:index === type}">{{ item }}</button>
 		</view>
 		<view class="date-panel-main">
 		<view class="date-toggle">
@@ -12,13 +12,14 @@
 		</view>
 		<!-- 星期几面板显示 -->
 		<view class="date-panel-content">
-			<text v-for="item of dateList">{{item}}</text>
+			<text :key="index" v-for="(item,index) of dateList">{{item}}</text>
 		</view>
 		
 		<!-- 日期面板显示 -->
 	<!-- 	:style="{borderRadius:item === 6 ? '33rpx 0 0 33rpx' : ''}" -->
 		<view class="date-number date-panel-content">
-			<text @click="selectDay(item)" 
+			<text @click="selectDay(item)"
+			:key="index"
 			:class="{
 				border:item.borderActive,
 				active:item.rangeActive,
@@ -65,7 +66,7 @@
 		methods:{
 			selectDay(item){
 				if(item.disabled) return
-				console.log(item)
+				
 				this.selectDate = item.text
 				this.createDateNumber()
 				// 开始时间 结束时间
@@ -118,7 +119,7 @@
 				
 				// 获取上个月当最后一天
 				let lastMonthDay = new Date(this.year, this.month, 0).getDate() - (day-1);
-				console.log(lastMonthDay,day)
+				//console.log(lastMonthDay,day)
 				//let nextMonthDay = new Date(this.year, this.month + 2, 0).getDate();
 				let nextMonthDay = 1
 				//高亮当前选择的天
@@ -150,7 +151,7 @@
 					
 					
 					if(this.currentTime.valueOf() > tempTime.valueOf()){
-						console.log("计算的时间",tempTime.valueOf(),"当前的时间",this.currentTime.valueOf())
+						//console.log("计算的时间",tempTime.valueOf(),"当前的时间",this.currentTime.valueOf())
 					}
 					
 					dateNumber.push({

@@ -4,6 +4,7 @@
 		<view class="text-area">
 			<text class="title">{{title}}</text>
 		</view> -->
+		<XdNavigation/>
 		<XdDatePicker v-model="dateTime"/>
 		<button class="xd-btn-big">确认</button>
 	</view>
@@ -11,9 +12,11 @@
 
 <script>
 	import XdDatePicker from '@/components/xd-datePicker.vue'
+	import XdNavigation from '@/components/navigation/index.vue'
 	export default {
 		components:{
-			XdDatePicker
+			XdDatePicker,
+			XdNavigation
 		},
 		data() {
 			return {
