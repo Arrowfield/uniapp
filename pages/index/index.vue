@@ -1,12 +1,13 @@
 <template>
 	<view class="content">
-<!-- 		<image class="logo" src="/static/logo.png"></image>
+		<!-- 		<image class="logo" src="/static/logo.png"></image>
 		<view class="text-area">
 			<text class="title">{{title}}</text>
 		</view> -->
-		<XdNavigation/>
-		<XdProgress percentage="14"/>
-		<XdDatePicker v-model="dateTime"/>
+		<XdNavigation />
+		<XdProgress percentage="14" />
+		<XdPicker></XdPicker>
+		<XdDatePicker v-model="dateTime" />
 		<button class="xd-btn-big">确认</button>
 	</view>
 </template>
@@ -15,21 +16,23 @@
 	import XdDatePicker from '@/components/xd-datePicker.vue'
 	import XdNavigation from '@/components/navigation/index.vue'
 	import XdProgress from '@/components/progress/index.vue'
+	import XdPicker from '@/components/xd-picker/XdPicker.vue'
 	export default {
-		components:{
+		components: {
 			XdDatePicker,
 			XdNavigation,
-			XdProgress
+			XdProgress,
+			XdPicker
 		},
 		data() {
 			return {
 				title: 'Hello',
-				dateTime:""
+				dateTime: ""
 			}
 		},
-		watch:{
-			dateTime(n,o){
-				console.log("得到的新值是",n)
+		watch: {
+			dateTime(n, o) {
+				console.log("得到的新值是", n)
 			}
 		},
 		onLoad() {
@@ -38,27 +41,29 @@
 		methods: {
 
 		},
-		mounted(){
+		mounted() {
 			console.log(this.dateTime)
 		}
 	}
 </script>
 
 <style lang="scss">
-	uni-page-body{
+	uni-page-body {
 		min-height: 100%;
 		background-color: $xd-bg-color;
-		color:$xd-text-color;
+		color: $xd-text-color;
 		font-family: PingFangSC-Regular, PingFang SC;
 	}
+
 	.content {
 		// display: flex;
 		// flex-direction: column;
 		// align-items: center;
 		// justify-content: center;
-		
+
 		// height: 100%;
-		&::before,&::after{
+		&::before,
+		&::after {
 			content: "";
 			display: table;
 		}
@@ -82,13 +87,14 @@
 		font-size: 36rpx;
 		color: #8f8f94;
 	}
-	.xd-btn-big{
+
+	.xd-btn-big {
 		width: 642rpx;
 		height: 92rpx;
 		background: $xd-color-primary;
 		border-radius: 16rpx;
-		color:white;
-		margin-top:336rpx;
+		color: white;
+		margin-top: 336rpx;
 		margin-bottom: 94rpx;
 	}
 </style>
