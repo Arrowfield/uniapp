@@ -29,6 +29,8 @@
 				this.globalData.menuBottom = menuButtonInfo.top - systemInfo.statusBarHeight;
 				// 菜单按钮栏(标题栏)的高度
 				this.globalData.menuHeight = menuButtonInfo.height;
+				
+				
 			}
 		}
 	}

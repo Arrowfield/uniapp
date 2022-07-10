@@ -5,6 +5,7 @@
 			<text class="title">{{title}}</text>
 		</view> -->
 		<XdNavigation/>
+		<XdProgress/>
 		<XdDatePicker v-model="dateTime"/>
 		<button class="xd-btn-big">确认</button>
 	</view>
@@ -13,10 +14,12 @@
 <script>
 	import XdDatePicker from '@/components/xd-datePicker.vue'
 	import XdNavigation from '@/components/navigation/index.vue'
+	import XdProgress from '@/components/progress/index.vue'
 	export default {
 		components:{
 			XdDatePicker,
-			XdNavigation
+			XdNavigation,
+			XdProgress
 		},
 		data() {
 			return {

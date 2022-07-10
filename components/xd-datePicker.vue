@@ -61,6 +61,15 @@
 			// 判断是否为当前月份
 			isCurrentMonth(){
 				
+			},
+			dateRange(){
+				if(this.type == 0){
+					return 7
+				}else if(this.type == 1){
+					return  30
+				}else{
+					return -1
+				}
 			}
 		},
 		methods:{
@@ -105,7 +114,7 @@
 				let d = new Date(this.year, this.month + 1, 0);
 				let currentMonthDay = d.getDate()
 
-				let temp = ""
+				let temp = 0
 				//console.log(currentMonthDay) // 31
 				//console.log(day) // day = 5 // 当day = 0 的时候表示星期天
 				if(day === 0){
@@ -153,11 +162,16 @@
 					if(this.currentTime.valueOf() > tempTime.valueOf()){
 						//console.log("计算的时间",tempTime.valueOf(),"当前的时间",this.currentTime.valueOf())
 					}
+					// 如果选择的日期超过了当前月 那么久跳到下个月 显示高亮
+					
+					if(currentMonthDay - this.selectDate < this.dateRange - 1){
+						console.log("下个月的某天需要高亮")
+					}
 					
 					dateNumber.push({
 						text:temp,
-						borderActive:isCurrentMonth && (this.selectDate === temp || this.selectDate + 6 === temp) ,
-						rangeActive:isCurrentMonth && temp >= this.selectDate && temp <  this.selectDate + 7,
+						borderActive:isCurrentMonth && (this.selectDate === temp || this.selectDate + (this.dateRange - 1) === temp) ,
+						//rangeActive:isCurrentMonth && temp >= this.selectDate && temp <  this.selectDate + 7,
 						// 小于当前时间当话 全部置灰
 						//disabled:temp <= this.currentDate || dateNumber.length < day - 1,
 						disabled:this.currentTime.valueOf() > tempTime.valueOf(),
@@ -166,7 +180,7 @@
 					})
 					
 					if(dateNumber.length == day - 1){ // 进入下个月当第一天
-						temp = ""
+						temp = 0
 					}
 				}
 				this.dateNumber = dateNumber
