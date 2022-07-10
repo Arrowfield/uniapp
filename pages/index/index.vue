@@ -5,7 +5,7 @@
 			<text class="title">{{title}}</text>
 		</view> -->
 		<XdNavigation/>
-		<XdProgress/>
+		<XdProgress percentage="14"/>
 		<XdDatePicker v-model="dateTime"/>
 		<button class="xd-btn-big">确认</button>
 	</view>

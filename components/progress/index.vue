@@ -1,14 +1,22 @@
 <template>
 	<view class="progress">
 		<view class="track">
-			<view class="progress-bar">
-				<text class="progress-bar-tips">30%</text>
+			<view class="progress-bar" :style="{width:percentage + '%'}">
+				<text class="progress-bar-tips">{{percentage}}%</text>
 			</view>
 		</view>
 	</view>
 </template>
 
 <script>
+	export default {
+		props:{
+			percentage:{
+				type:String,
+				default:"30"
+			}
+		}
+	}
 </script>
 
 <style lang="scss">
@@ -44,8 +52,9 @@
 			color: white;
 			background-color: $xd-color-primary;
 			height: 42rpx; // 总高度是52rpx，三角形的高度是10rpx
-			width: 68rpx;;
+			// width: 68rpx;;
 			border-radius: 12rpx;;
+			padding: 0 10rpx;;
 			font-size: 28rpx;
 			text-align: center;
 			line-height: 42rpx;
