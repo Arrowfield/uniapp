@@ -8,7 +8,20 @@
 		<XdProgress percentage="14" />
 		<XdPicker></XdPicker>
 		<XdDatePicker v-model="dateTime" />
+		<XdTabs :active="active" @change="onChange">
+			<xd-tab-pane title="标签1">i am is a pane 1</xd-tab-pane>
+			<xd-tab-pane title="标签2">i am is a pane 2</xd-tab-pane>
+			<xd-tab-pane title="标签3">i am is a pane 3</xd-tab-pane>
+		</XdTabs>
 		<button class="xd-btn-big">确认</button>
+		
+		
+		<van-tabs >
+		  <van-tab title="标签 1">内容 1</van-tab>
+		  <van-tab title="标签 2">内容 2</van-tab>
+		  <van-tab title="标签 3">内容 3</van-tab>
+		  <van-tab title="标签 4">内容 4</van-tab>
+		</van-tabs>
 	</view>
 </template>
 
@@ -17,17 +30,23 @@
 	import XdNavigation from '@/components/navigation/index.vue'
 	import XdProgress from '@/components/progress/index.vue'
 	import XdPicker from '@/components/xd-picker/XdPicker.vue'
+	
+	import XdTabs from '@/components/xd-tabs-web/tabs.vue'
+	import XdTabPane from '@/components/xd-tabs-web/tab-pane.vue'
 	export default {
 		components: {
 			XdDatePicker,
 			XdNavigation,
 			XdProgress,
-			XdPicker
+			XdPicker,
+			XdTabs,
+			XdTabPane
 		},
 		data() {
 			return {
 				title: 'Hello',
-				dateTime: ""
+				dateTime: "",
+				active:1
 			}
 		},
 		watch: {
@@ -39,7 +58,9 @@
 
 		},
 		methods: {
-
+			onChange(){
+				console.log("出发tabs的切换逻辑")
+			}
 		},
 		mounted() {
 			console.log(this.dateTime)
