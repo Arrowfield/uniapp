@@ -8,20 +8,27 @@
 		<XdProgress percentage="14" />
 		<XdPicker></XdPicker>
 		<XdDatePicker v-model="dateTime" />
-		<XdTabs :active="active" @change="onChange">
+		<!-- <XdTabs :active="active" @change="onChange">
 			<xd-tab-pane title="标签1">i am is a pane 1</xd-tab-pane>
 			<xd-tab-pane title="标签2">i am is a pane 2</xd-tab-pane>
 			<xd-tab-pane title="标签3">i am is a pane 3</xd-tab-pane>
-		</XdTabs>
+		</XdTabs> -->
+		<tabs :active="active" @change="onChange">
+			<tab title="标签1">i am is a pane 1</tab>
+			<tab title="标签2">i am is a pane 2</tab>
+			<tab title="标签3">i am is a pane 3</tab>
+		</tabs>
+		
+		
 		<button class="xd-btn-big">确认</button>
 		
 		
-		<van-tabs >
+<!-- 		<van-tabs >
 		  <van-tab title="标签 1">内容 1</van-tab>
 		  <van-tab title="标签 2">内容 2</van-tab>
 		  <van-tab title="标签 3">内容 3</van-tab>
 		  <van-tab title="标签 4">内容 4</van-tab>
-		</van-tabs>
+		</van-tabs> -->
 	</view>
 </template>
 
@@ -31,16 +38,16 @@
 	import XdProgress from '@/components/progress/index.vue'
 	import XdPicker from '@/components/xd-picker/XdPicker.vue'
 	
-	import XdTabs from '@/components/xd-tabs-web/tabs.vue'
-	import XdTabPane from '@/components/xd-tabs-web/tab-pane.vue'
+	// import XdTabs from '@/components/xd-tabs-web/tabs.vue'
+	// import XdTabPane from '@/components/xd-tabs-web/tab-pane.vue'
 	export default {
 		components: {
 			XdDatePicker,
 			XdNavigation,
 			XdProgress,
 			XdPicker,
-			XdTabs,
-			XdTabPane
+			// XdTabs,
+			// XdTabPane
 		},
 		data() {
 			return {
