@@ -1,6 +1,6 @@
-<view class="wrapper">
-<button data-index="0" bindtap="changeActive">切换</button>
-<button data-index="1" bindtap="changeActive">切换</button>
-<button data-index="2" bindtap="changeActive">切换</button>
-  <slot></slot>
+<view class="wrapper class-tab">
+	<button class="tab-head" data-index="0" bindtap="changeActive">切换</button>
+	<button data-index="1" bindtap="changeActive">切换</button>
+	<button data-index="2" bindtap="changeActive">切换</button>
+	<slot></slot>
 </view>

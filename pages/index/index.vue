@@ -13,7 +13,7 @@
 			<xd-tab-pane title="标签2">i am is a pane 2</xd-tab-pane>
 			<xd-tab-pane title="标签3">i am is a pane 3</xd-tab-pane>
 		</XdTabs> -->
-		<tabs :active="active" @change="onChange">
+		<tabs :active="active" @change="onChange" class-tab="class-tab-a">
 			<tab title="标签1">i am is a pane 1</tab>
 			<tab title="标签2">i am is a pane 2</tab>
 			<tab title="标签3">i am is a pane 3</tab>
@@ -76,6 +76,10 @@
 </script>
 
 <style lang="scss">
+	.class-tab-a{
+		color:red;
+		font-size: 50rpx;
+	}
 	uni-page-body {
 		min-height: 100%;
 		background-color: $xd-bg-color;
