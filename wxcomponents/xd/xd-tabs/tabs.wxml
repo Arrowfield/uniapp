@@ -1,6 +1,6 @@
-<view class="wrapper">
+<view class="wrapper class-tab">
 <view class="tabs-header">
-	<view class="{{activeIndex == index ? 'lable active' : 'lable'}}" 
+	<view wx:key="index" class="{{activeIndex == index ? 'lable active' : 'lable'}}" 
 	wx:for="{{heads}}" data-index="{{index}}" 
 	bindtap="changeActive">
 	<view class="label-text">{{item}}<view class="border-active"></view></view>

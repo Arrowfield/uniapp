@@ -44,7 +44,7 @@
 				// console.log(temp)
 				// this.tabs.push(i)
 				let query = wx.createSelectorQuery().in(temp)
-				console.log(query)
+
 			}
 			//console.log(this)
 		}

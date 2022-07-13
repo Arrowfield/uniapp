@@ -13,7 +13,7 @@
 			<xd-tab-pane title="标签2">i am is a pane 2</xd-tab-pane>
 			<xd-tab-pane title="标签3">i am is a pane 3</xd-tab-pane>
 		</XdTabs> -->
-		<xd-tabs :active="active" @change="onChange">
+		<xd-tabs v-model="active" @change="onChange" class-tab='class-tab-a'>
 			<xd-tab title="项目检测">i am is a pane 1</xd-tab>
 			<xd-tab title="清洁班组">i am is a pane 2</xd-tab>
 			
@@ -59,6 +59,9 @@
 		watch: {
 			dateTime(n, o) {
 				console.log("得到的新值是", n)
+			},
+			active(n, o) {
+				console.log("得到的新值是", n)
 			}
 		},
 		onLoad() {
@@ -70,7 +73,7 @@
 			}
 		},
 		mounted() {
-			console.log(this.dateTime)
+
 		}
 	}
 </script>

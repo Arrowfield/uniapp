@@ -2,23 +2,24 @@
 	<view>
 		<!-- 时间范围类型切换 -->
 		<view class="date-picker-header">
-			<button :key="index" @click="toggleType(index)" v-for="(item,index) of timeRangeTypes" :class="{active:index === type}">{{ item }}</button>
+			<button class="header-btn" :key="index" @click="toggleType(index)" v-for="(item,index) of timeRangeTypes" :class="{active:index === type}">{{ item }}</button>
 		</view>
 		<view class="date-panel-main">
 		<view class="date-toggle">
-			<button class="prev" @click="toggleMonth(1)"></button>
+			<button class="prev date-button" @click="toggleMonth(1)"></button>
 			<text class="date-toggle-label">{{year}}年{{month+1}}月</text>
-			<button class="next" @click="toggleMonth(2)"></button>
+			<button class="next date-button" @click="toggleMonth(2)"></button>
 		</view>
 		<!-- 星期几面板显示 -->
 		<view class="date-panel-content">
-			<text :key="index" v-for="(item,index) of dateList">{{item}}</text>
+			<text class="text" :key="index" v-for="(item,index) of dateList">{{item}}</text>
 		</view>
 		
 		<!-- 日期面板显示 -->
 	<!-- 	:style="{borderRadius:item === 6 ? '33rpx 0 0 33rpx' : ''}" -->
 		<view class="date-number date-panel-content">
 			<text @click="selectDay(item)"
+			class="text"
 			:key="index"
 			:class="{
 				border:item.borderActive,
@@ -215,7 +216,7 @@
 		padding: 6rpx 6rpx 0;
 		display: flex;
 		align-items: center;
-		button{
+		.header-btn{
 			width: 256rpx;
 			text-align: center;
 			color: white;
@@ -252,7 +253,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		button{
+		.date-button{
 			
 			&.prev{
 				background:  url("@/static/assets/icons/prev_month.png") no-repeat center;
@@ -288,7 +289,7 @@
 		padding: 0 20rpx;
 		display: flex;
 		flex-wrap: wrap;
-		text{
+		.text{
 			text-align: center;
 			color: #999;
 			font-size: 36rpx;
@@ -314,7 +315,7 @@
 	}
 	.date-number{
 		margin-top: 14rpx;
-		text{
+		.text{
 			padding: 8rpx 0;
 			margin-bottom: 22rpx;
 			color: $xd-text-color;
