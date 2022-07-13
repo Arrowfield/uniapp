@@ -13,11 +13,11 @@
 			<xd-tab-pane title="标签2">i am is a pane 2</xd-tab-pane>
 			<xd-tab-pane title="标签3">i am is a pane 3</xd-tab-pane>
 		</XdTabs> -->
-		<xd-tabs v-model="active" @change="onChange" class="my-test-class" class-tab='class-tab-a'>
+<!-- 		<xd-tabs v-model="active" @change="onChange" class="my-test-class" class-tab='class-tab-a'>
 			<xd-tab title="项目检测">i am is a pane 1</xd-tab>
 			<xd-tab title="清洁班组">i am is a pane 2</xd-tab>
 			
-		</xd-tabs>
+		</xd-tabs> -->
 		
 		
 		<button class="xd-btn-big">确认</button>
@@ -29,6 +29,7 @@
 		  <van-tab title="标签 3">内容 3</van-tab>
 		  <van-tab title="标签 4">内容 4</van-tab>
 		</van-tabs> -->
+		<xd-button></xd-button>
 	</view>
 </template>
 
@@ -38,7 +39,7 @@
 	import XdProgress from '@/components/progress/index.vue'
 	import XdPicker from '@/components/xd-picker/XdPicker.vue'
 	
-	// import XdTabs from '@/components/xd-tabs-web/tabs.vue'
+	//import XdTabs from '@/components/xd-tabs-web/tabs.vue'
 	// import XdTabPane from '@/components/xd-tabs-web/tab-pane.vue'
 	export default {
 		components: {
