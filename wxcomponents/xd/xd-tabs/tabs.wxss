@@ -1,0 +1,42 @@
+.tabs-header{
+	display: flex;
+	align-items: center;
+	margin-top:20rpx;
+	
+	
+}
+.tabs-header view.lable{
+	background:transparent;
+	padding:22rpx 0 ;
+	flex:1 1 auto;
+	text-align: center;
+	line-height: 50rpx;
+	height: 94rpx;
+	box-sizing: border-box;
+	color:#666;
+	font-size: 36rpx;
+	
+}
+
+.label-text{
+	position: relative;
+}
+
+.tabs-header view.active{
+	color:#3A85F5;
+	/* border-bottom: 4rpx linear-gradient(270deg, rgba(58,133,245,0) 0%, #3A85F5 100%) solid; */
+
+}
+.tabs-header view.active .border-active{
+	display: block;
+	width: 160rpx;
+	height: 4rpx;
+/* 	margin-top:2rpx; */
+	background: linear-gradient(270deg, rgba(58,133,245,0) 0%, #3A85F5 100%);
+	border-radius: 4rpx;
+	margin:2rpx auto 0;
+	position: absolute;
+	top:100%;
+	left:50%;
+	margin-left: -80rpx;
+}

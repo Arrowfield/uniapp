@@ -13,11 +13,11 @@
 			<xd-tab-pane title="标签2">i am is a pane 2</xd-tab-pane>
 			<xd-tab-pane title="标签3">i am is a pane 3</xd-tab-pane>
 		</XdTabs> -->
-		<tabs :active="active" @change="onChange">
-			<tab title="标签1">i am is a pane 1</tab>
-			<tab title="标签2">i am is a pane 2</tab>
-			<tab title="标签3">i am is a pane 3</tab>
-		</tabs>
+		<xd-tabs :active="active" @change="onChange">
+			<xd-tab title="项目检测">i am is a pane 1</xd-tab>
+			<xd-tab title="清洁班组">i am is a pane 2</xd-tab>
+			
+		</xd-tabs>
 		
 		
 		<button class="xd-btn-big">确认</button>

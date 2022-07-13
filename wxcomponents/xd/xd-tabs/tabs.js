@@ -16,7 +16,14 @@ Component({
 	},
 	data(){
 		return {
-			nodes:[]
+			nodes:[],
+			heads:[],
+			activeIndex:0,
+		}
+	},
+	properties:{
+		active:{
+			type:Number,
 		}
 	},
 	methods: {
@@ -25,31 +32,49 @@ Component({
 			this.nodes = this.getRelationNodes('./tab')
 			// 取到title
 			
+			let heads = []
+			this.nodes.forEach((item)=>{
+			
+				heads.push(item.data.title)
+			})
 			this.nodes[0].setData({
 				active:1
 			})
+			// console.log(this.heads)
+			this.setData({
+				heads:heads,
+				activeIndex:0
+			})
+			
 		},
 		changeActive(event){
-			console.log(event.currentTarget.dataset.index)
+			
 			let index = event.currentTarget.dataset.index
-			// this.nodes[index].setData({
-			// 	active:1
-			// })
+
+			this.setData({
+				activeIndex:index
+			})
 			this.nodes.forEach((item,i)=>{
 				let active = -1
 				if(index == i){
 					active = 1
+
 				}
 				item.setData({
 					active
 				})	
 			
 			})
-			
+			// 触发父组件事件
+		
+			this.triggerEvent('change')
 		}
 	},
 	ready: function() {
 		this._getAllLi()
+	},
+	load(){
+		
 	}
 })
 	

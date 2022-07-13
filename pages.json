@@ -25,8 +25,8 @@
 			"van-tabs": "wxcomponents/vant/tabs/index",
 			"van-tab": "wxcomponents/vant/tab/index",
 			// 原生组
-			"tabs": "wxcomponents/xd/xd-tabs/tabs",
-			"tab": "wxcomponents/xd/xd-tabs/tab"
+			"xd-tabs": "wxcomponents/xd/xd-tabs/tabs",
+			"xd-tab": "wxcomponents/xd/xd-tabs/tab"
 		}
 	},
 	"uniIdRouter": {}

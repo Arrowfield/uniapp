@@ -1,6 +1,11 @@
 <view class="wrapper">
-<button data-index="0" bindtap="changeActive">切换</button>
-<button data-index="1" bindtap="changeActive">切换</button>
-<button data-index="2" bindtap="changeActive">切换</button>
+<view class="tabs-header">
+	<view class="{{activeIndex == index ? 'lable active' : 'lable'}}" 
+	wx:for="{{heads}}" data-index="{{index}}" 
+	bindtap="changeActive">
+	<view class="label-text">{{item}}<view class="border-active"></view></view>
+	</view>
+	
+</view>
   <slot></slot>
 </view>
