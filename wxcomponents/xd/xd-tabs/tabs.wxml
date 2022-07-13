@@ -1,4 +1,4 @@
-<view class="wrapper class-tab">
+<view class="wrapper wrapper-tabs class-tab">
 <view class="tabs-header">
 	<view wx:key="index" class="{{activeIndex == index ? 'lable active' : 'lable'}}" 
 	wx:for="{{heads}}" data-index="{{index}}" 

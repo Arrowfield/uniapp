@@ -38,4 +38,7 @@
 
 <style>
 	/*每个页面公共css */
+	 .my-test-class  .wrapper-tabs{
+		background-color: black;
+	}
 </style>

@@ -1,5 +1,9 @@
 Component({
 	externalClasses: ['class-tab'],
+	options: {
+		multipleSlots: true ,// 在组件定义时的选项中启用多 slot 支持
+		addGlobalClass: true,
+	},
 	relations: {
 		'./tab': {
 			type: 'child', // 关联的目标节点应为子节点
@@ -53,6 +57,7 @@ Component({
 			})
 
 		},
+
 		changeActive(event) {
 
 			let index = event.currentTarget.dataset.index
