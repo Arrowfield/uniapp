@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <view class="wrapper">
 <view class="tabs-header">
 	<view class="{{activeIndex == index ? 'lable active' : 'lable'}}" 
@@ -8,4 +9,11 @@
 	
 </view>
   <slot></slot>
+=======
+<view class="wrapper class-tab">
+	<button class="tab-head" data-index="0" bindtap="changeActive">切换</button>
+	<button data-index="1" bindtap="changeActive">切换</button>
+	<button data-index="2" bindtap="changeActive">切换</button>
+	<slot></slot>
+>>>>>>> d15747c5f63cf5cf909d94e23bb44144290f9bfc
 </view>

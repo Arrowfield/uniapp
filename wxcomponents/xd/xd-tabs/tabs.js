@@ -1,4 +1,5 @@
 Component({
+	externalClasses: ['class-tab'],
 	relations: {
 		'./tab': {
 			type: 'child', // 关联的目标节点应为子节点

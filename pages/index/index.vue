@@ -76,6 +76,10 @@
 </script>
 
 <style lang="scss">
+	.class-tab-a{
+		color:red;
+		font-size: 50rpx;
+	}
 	uni-page-body {
 		min-height: 100%;
 		background-color: $xd-bg-color;
