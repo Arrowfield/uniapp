@@ -56,6 +56,9 @@ Component({
 		changeActive(event) {
 
 			let index = event.currentTarget.dataset.index
+			// let com = this.selectComponent(".my-component")
+			// console.log(com)
+			//https://developers.weixin.qq.com/miniprogram/dev/framework/custom-component/events.html#%E8%87%AA%E5%AE%9A%E4%B9%89%E7%9A%84%E7%BB%84%E4%BB%B6%E5%AE%9E%E4%BE%8B%E8%8E%B7%E5%8F%96%E7%BB%93%E6%9E%9C
 
 			this.setData({
 				activeIndex: index
