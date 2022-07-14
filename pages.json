@@ -27,6 +27,7 @@
 			// 原生组
 			"xd-tabs": "wxcomponents/xd/xd-tabs/tabs",
 			"xd-tab": "wxcomponents/xd/xd-tabs/tab"
+			
 		}
 	},
 	"uniIdRouter": {}

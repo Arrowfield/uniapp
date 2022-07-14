@@ -25,7 +25,8 @@ Component({
 	properties:{
 		active:{
 			type:Number,
-		}
+		},
+		value:Number,
 	},
 	methods: {
 		_getAllLi: function() {
@@ -66,9 +67,14 @@ Component({
 				})	
 			
 			})
+			
+			this.setData({
+				value:1
+			})
 			// 触发父组件事件
 		
 			this.triggerEvent('change')
+			//this.triggerEvent('input')
 		}
 	},
 	ready: function() {
