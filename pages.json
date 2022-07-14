@@ -30,5 +30,14 @@
 			
 		}
 	},
-	"uniIdRouter": {}
+	"uniIdRouter": {},
+	
+	"easycom": {
+	  "autoscan": true, //是否自动扫描组件
+	  "custom": {
+	    "^uni-(.*)": "@/components/uni-$1.vue", // 匹配components目录内的vue文件
+	    "^vue-file-(.*)": "packageName/path/to/vue-file-$1.vue", // 匹配node_modules内的vue文件
+		"^xd-(.*)": "@/components/xd-$1/xd-$1.vue" // 匹配components目录内的vue文件
+	  }
+	}
 }

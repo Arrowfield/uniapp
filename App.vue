@@ -7,19 +7,19 @@
 			menuHeight: 0, // 胶囊高度
 	    },
 		onLaunch: function() {
-			console.log('App Launch')
+			//console.log('App Launch')
 			this.calcNavBarInfo()
 		},
 		onShow: function() {
-			console.log('App Show')
+			//console.log('App Show')
 		},
 		onHide: function() {
-			console.log('App Hide')
+			//console.log('App Hide')
 		},
 		methods:{
 			calcNavBarInfo(){
 				const systemInfo = wx.getSystemInfoSync();
-				console.log(systemInfo)
+				
 				// 胶囊按钮位置信息
 				const menuButtonInfo = wx.getMenuButtonBoundingClientRect();
 				// 导航栏高度 = 状态栏到胶囊的间距（胶囊上坐标位置-状态栏高度） * 2 + 胶囊高度 + 状态栏高度
@@ -38,4 +38,7 @@
 
 <style>
 	/*每个页面公共css */
+	 .my-test-class  .wrapper-tabs{
+		background-color: black;
+	}
 </style>

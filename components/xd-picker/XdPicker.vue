@@ -31,7 +31,7 @@
 		            for (let i = 1; i <= 31; i++) {
 		                days.push(i)
 		            }
-					console.log(years)
+
 		            return {
 		                title: 'picker-view',
 		                years,

@@ -1,3 +1,12 @@
+<template>
+<uni-shadow-root class="xd-tab-tab"><text> li </text></uni-shadow-root>
+</template>
+
+<script>
+
+global['__wxVueOptions'] = {components:{}}
+
+global['__wxRoute'] = 'xd/tab/tab'
 Component({
 	relations: {
 		'../xd-tabs/index': {
@@ -16,3 +25,8 @@ Component({
 	},
 
 })
+export default global['__wxComponents']['xd/tab/tab']
+</script>
+<style platform="mp-weixin">
+
+</style>

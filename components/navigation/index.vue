@@ -21,7 +21,7 @@
 <script>
 	export default {
 		data(){
-			console.log(getApp())
+			//console.log(getApp())
 			return {
 				navBarHeight: getApp().globalData.navBarHeight, //导航栏高度
 				menuRight: getApp().globalData.menuRight, // 胶囊距右方间距（方保持左、右间距一致）
