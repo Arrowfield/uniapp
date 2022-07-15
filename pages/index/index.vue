@@ -93,11 +93,8 @@
 	}
 </script>
 
-<style lang="scss">
-	.class-tab-a{
-		color:red;
-		font-size: 50rpx;
-	}
+<style lang="scss" >
+
 	uni-page-body {
 		min-height: 100%;
 		background-color: $xd-bg-color;
@@ -146,5 +143,11 @@
 		color: white;
 		margin-top: 336rpx;
 		margin-bottom: 94rpx;
+	}
+</style>
+<style>
+	.class-tab-a{
+		color:red;
+		font-size: 50rpx;
 	}
 </style>
