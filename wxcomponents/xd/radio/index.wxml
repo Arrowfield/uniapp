@@ -1,0 +1,6 @@
+<view class="radio" bindtap="onClickLabel">
+	<view class="raiod-icon {{ value == name && 'checked' }}" >
+		<text wx:if="{{ value == name }}" class="circle"></text>
+	</view>
+	<text class="label"><slot></slot></text>
+</view>

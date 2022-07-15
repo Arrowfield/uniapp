@@ -23,13 +23,23 @@
 		<button class="xd-btn-big">确认</button>
 		
 		
+		
 <!-- 		<van-tabs >
 		  <van-tab title="标签 1">内容 1</van-tab>
 		  <van-tab title="标签 2">内容 2</van-tab>
 		  <van-tab title="标签 3">内容 3</van-tab>
 		  <van-tab title="标签 4">内容 4</van-tab>
 		</van-tabs> -->
-		<xd-button></xd-button>
+		
+		
+		
+		<!-- https://github.com/youzan/vant-weapp/tree/dev/dist/radio-group -->
+		<xd-radio-group :value="radio" @change="onChangeRadio">
+		  <xd-radio name="1">单选框 1</xd-radio>
+		  <xd-radio name="2">单选框 2</xd-radio>
+		</xd-radio-group>
+		
+		
 	</view>
 </template>
 
@@ -54,7 +64,8 @@
 			return {
 				title: 'Hello',
 				dateTime: "",
-				active:1
+				active:1,
+				radio:1
 			}
 		},
 		watch: {
@@ -70,7 +81,10 @@
 		},
 		methods: {
 			onChange(){
-				console.log("出发tabs的切换逻辑")
+				// console.log("出发tabs的切换逻辑")
+			},
+			onChangeRadio(val){
+				
 			}
 		},
 		mounted() {

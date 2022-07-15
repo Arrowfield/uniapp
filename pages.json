@@ -26,7 +26,9 @@
 			"van-tab": "wxcomponents/vant/tab/index",
 			// 原生组
 			"xd-tabs": "wxcomponents/xd/xd-tabs/tabs",
-			"xd-tab": "wxcomponents/xd/xd-tabs/tab"
+			"xd-tab": "wxcomponents/xd/xd-tabs/tab",
+			"xd-radio": "wxcomponents/xd/radio/index",
+			"xd-radio-group": "wxcomponents/xd/radio-group/index"
 		}
 	},
 	"uniIdRouter": {},
@@ -36,7 +38,7 @@
 	  "custom": {
 	    "^uni-(.*)": "@/components/uni-$1.vue", // 匹配components目录内的vue文件
 	    "^vue-file-(.*)": "packageName/path/to/vue-file-$1.vue", // 匹配node_modules内的vue文件
-		"^xd-(.*)": "@/components/xd-$1/xd-$1.vue" // 匹配components目录内的vue文件
+		"^xd-vue-(.*)": "@/components/xd-vue-$1/xd-vue-$1.vue" // 匹配components目录内的vue文件
 	  }
 	}
 }

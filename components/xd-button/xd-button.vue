@@ -1,5 +1,5 @@
 <template>
-	<view>1231</view>
+	<view></view>
 </template>
 <script>
 	export default{}
