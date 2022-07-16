@@ -16,6 +16,19 @@
 			
 		}
 	],
+	"subPackages": [
+		{
+			"root": "pages-xd-ui",
+			"pages": [
+				{
+					"path": "xd-ui-image/image-viewer",
+					"style": {
+						"navigationStyle": "custom"
+					}
+				}
+			]
+		}
+	],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",

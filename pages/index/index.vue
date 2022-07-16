@@ -4,7 +4,7 @@
 		<view class="text-area">
 			<text class="title">{{title}}</text>
 		</view> -->
-		<XdNavigation />
+		<!-- <XdNavigation /> -->
 		<XdProgress percentage="14" />
 		<XdPicker></XdPicker>
 		<XdDatePicker v-model="dateTime" />
@@ -39,13 +39,15 @@
 		  <xd-radio name="2">单选框 2</xd-radio>
 		</xd-radio-group>
 		
+		<!-- echart 饼状 -->
+		
 		
 	</view>
 </template>
 
 <script>
 	import XdDatePicker from '@/components/xd-datePicker.vue'
-	import XdNavigation from '@/components/navigation/index.vue'
+	// import XdNavigation from '@/components/navigation/index.vue'
 	import XdProgress from '@/components/progress/index.vue'
 	import XdPicker from '@/components/xd-picker/XdPicker.vue'
 	
@@ -54,7 +56,7 @@
 	export default {
 		components: {
 			XdDatePicker,
-			XdNavigation,
+			//XdNavigation,
 			XdProgress,
 			XdPicker,
 			// XdTabs,

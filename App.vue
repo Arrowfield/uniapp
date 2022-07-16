@@ -5,6 +5,7 @@
 			navBarHeight: 0, // 导航栏高度
 			menuBottom: 0, // 胶囊距底部间距（顶部间距也是这个）
 			menuHeight: 0, // 胶囊高度
+			statusHeight:0,
 	    },
 		onLaunch: function() {
 			//console.log('App Launch')
@@ -29,6 +30,7 @@
 				this.globalData.menuBottom = menuButtonInfo.top - systemInfo.statusBarHeight;
 				// 菜单按钮栏(标题栏)的高度
 				this.globalData.menuHeight = menuButtonInfo.height;
+				this.globalData.statusHeight = systemInfo.statusBarHeight
 				
 				
 			}
