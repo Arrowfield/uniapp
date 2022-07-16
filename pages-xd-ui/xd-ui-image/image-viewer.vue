@@ -7,10 +7,10 @@
 
 
 		<view class="uni-margin-wrap">
-			<swiper 	@change="bindchange" class="swiper" 	:current="current" circular :indicator-dots="indicatorDots" :autoplay="false" :interval="interval"
+			<swiper	@change="bindchange" class="swiper" 	:current="current" circular :indicator-dots="indicatorDots" :autoplay="false" :interval="interval"
 				:duration="duration">
-				<swiper-item :key="index" v-for="(item,index) of imageList">
-					<image 	 class="image" :src="item" @click="viewerImage"/>
+				<swiper-item  class="swiper-item" :key="index" v-for="(item,index) of imageList">
+					<image mode="widthFix"	 class="image" :src="item" @click="viewerImage"/>
 				</swiper-item>
 				
 			</swiper>
@@ -66,8 +66,8 @@
 
 
 	.image{
-		width: 750rpx;
-		height: 750rpx;
+		width: 650rpx;
+		// height: 650rpx;
 	}
 </style>
 <style lang="scss">
@@ -76,5 +76,10 @@
 		color: #fff;
 		height: 100vh;
 		box-sizing: border-box;
+	}
+	.swiper-item{
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 </style>
