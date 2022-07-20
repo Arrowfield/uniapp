@@ -37,6 +37,7 @@
 </template>
 
 <script>
+	// 日历组件的标准版
 	export default {
 		data(){
 			return {
@@ -75,12 +76,24 @@
 		},
 		methods:{
 			selectDay(item){
-				if(item.disabled) return
-				
+				// if(item.disabled) return
+				// 如果是上个月的数值
 				this.selectDate = item.text
-				this.createDateNumber()
+				if(item.index < 7 && item.text > 22){
+					// 
+					this.toggleMonth(1)
+					//return
+				}else if(item.index > 27 && item.text < 14){
+					this.toggleMonth(2)
+					//return
+				}else{
+					this.createDateNumber()
+				}
+				
+				
+				
 				// 开始时间 结束时间
-				this.$emit("input",item)
+				this.$emit("input",`${this.year}-${this.month + 1}-${item.text}`)
 			},
 			
 			toggleMonth(type){
@@ -166,18 +179,19 @@
 					// 如果选择的日期超过了当前月 那么久跳到下个月 显示高亮
 					
 					if(currentMonthDay - this.selectDate < this.dateRange - 1){
-						console.log("下个月的某天需要高亮")
+						//console.log("下个月的某天需要高亮")
 					}
 					
 					dateNumber.push({
 						text:temp,
-						borderActive:isCurrentMonth && (this.selectDate === temp || this.selectDate + (this.dateRange - 1) === temp) ,
+						borderActive:isCurrentMonth && this.selectDate === temp ,
 						//rangeActive:isCurrentMonth && temp >= this.selectDate && temp <  this.selectDate + 7,
 						// 小于当前时间当话 全部置灰
-						//disabled:temp <= this.currentDate || dateNumber.length < day - 1,
-						disabled:this.currentTime.valueOf() > tempTime.valueOf(),
-						startDate:isCurrentMonth && this.selectDate === temp,
-						endDate:isCurrentMonth && this.selectDate + 6 === temp,
+						disabled:!isCurrentMonth,
+						index:i,
+						//disabled:this.currentTime.valueOf() > tempTime.valueOf(),
+						//startDate:isCurrentMonth && this.selectDate === temp,
+						//endDate:isCurrentMonth && this.selectDate + 6 === temp,
 					})
 					
 					if(dateNumber.length == day - 1){ // 进入下个月当第一天
@@ -193,7 +207,7 @@
 			const date = new Date()
 			this.year = date.getFullYear()
 			this.month = date.getMonth()
-			this.selectDate = date.getDate()+1
+			this.selectDate = date.getDate()
 			this.currentDate = date.getDate()
 			// 如果时间小于这个，就置灰，禁止用户选择
 			this.currentTime = new Date(this.year,this.month+1,this.selectDate)
