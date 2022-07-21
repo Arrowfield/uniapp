@@ -6,29 +6,40 @@
 			// 	"navigationBarTitleText": "选择排班时间范围",
 			// 	"navigationBarTextStyle": "black",
 			// 	"navigationBarBackgroundColor": "#fff"
-				
+
 			// }
 			"style": {
 				"navigationStyle": "custom",
-				"navigationBarTextStyle":"black"
+				"navigationBarTextStyle": "black"
 
 			}
-			
-		}
-	],
-	"subPackages": [
+
+		},
 		{
-			"root": "pages-xd-ui",
-			"pages": [
-				{
-					"path": "xd-ui-image/image-viewer",
-					"style": {
-						"navigationStyle": "custom"
-					}
-				}
-			]
+			"path": "pages/test/test",
+			// "style": {
+			// 	"navigationBarTitleText": "选择排班时间范围",
+			// 	"navigationBarTextStyle": "black",
+			// 	"navigationBarBackgroundColor": "#fff"
+		
+			// }
+			"style": {
+				
+				"navigationBarTextStyle": "black"
+		
+			}
+		
 		}
 	],
+	"subPackages": [{
+		"root": "pages-xd-ui",
+		"pages": [{
+			"path": "xd-ui-image/image-viewer",
+			"style": {
+				"navigationStyle": "custom"
+			}
+		}]
+	}],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",
@@ -41,17 +52,18 @@
 			"xd-tabs": "wxcomponents/xd/xd-tabs/tabs",
 			"xd-tab": "wxcomponents/xd/xd-tabs/tab",
 			"xd-radio": "wxcomponents/xd/radio/index",
-			"xd-radio-group": "wxcomponents/xd/radio-group/index"
+			"xd-radio-group": "wxcomponents/xd/radio-group/index",
+			"ec-canvas": "wxcomponents/ec-canvas/ec-canvas"
 		}
 	},
 	"uniIdRouter": {},
-	
+
 	"easycom": {
-	  "autoscan": true, //是否自动扫描组件
-	  "custom": {
-	    "^uni-(.*)": "@/components/uni-$1.vue", // 匹配components目录内的vue文件
-	    "^vue-file-(.*)": "packageName/path/to/vue-file-$1.vue", // 匹配node_modules内的vue文件
-		"^xd-vue-(.*)": "@/components/xd-vue-$1/xd-vue-$1.vue" // 匹配components目录内的vue文件
-	  }
+		"autoscan": true, //是否自动扫描组件
+		"custom": {
+			"^uni-(.*)": "@/components/uni-$1.vue", // 匹配components目录内的vue文件
+			"^vue-file-(.*)": "packageName/path/to/vue-file-$1.vue", // 匹配node_modules内的vue文件
+			"^xd-vue-(.*)": "@/components/xd-vue-$1/xd-vue-$1.vue" // 匹配components目录内的vue文件
+		}
 	}
 }

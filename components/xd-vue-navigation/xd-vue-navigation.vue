@@ -39,6 +39,8 @@
 		left: 0;
 		width: 100vw;
 		color: #333;
+		background-color: white;
+		z-index: 1000;
 	}
 
 	.nav-main {
