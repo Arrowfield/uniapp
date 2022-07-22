@@ -12,14 +12,14 @@
 		</view>
 		<!-- 星期几面板显示 -->
 		<view class="date-panel-content">
-			<text class="text" :key="index" v-for="(item,index) of dateList">{{item}}</text>
+			<text class="my-text" :key="index" v-for="(item,index) of dateList">{{item}}</text>
 		</view>
 		
 		<!-- 日期面板显示 -->
 	<!-- 	:style="{borderRadius:item === 6 ? '33rpx 0 0 33rpx' : ''}" -->
 		<view class="date-number date-panel-content">
-			<text @click="selectDay(item)"
-			class="text"
+			<view @click="selectDay(item)"
+			class="date-item"
 			:key="index"
 			:class="{
 				border:item.borderActive,
@@ -30,7 +30,7 @@
 			}"  v-for="(item,index) of dateNumber">
 			{{item.text}}
 			<text class="date-number-border_active" v-show="item.borderActive">{{item.text}}</text>
-			</text>
+			</view>
 		</view>
 		</view>
 	</view>
@@ -217,7 +217,7 @@
 	}
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 	
 	.date-picker-header{
 		box-sizing: border-box;
@@ -303,14 +303,14 @@
 		padding: 0 20rpx;
 		display: flex;
 		flex-wrap: wrap;
-		.text{
+		.my-text,.date-item{
 			text-align: center;
 			color: #999;
-			font-size: 36rpx;
-			height: 50rpx;
-			line-height: 50rpx;
-			width: calc(100% / 7);
-			position: relative;
+			// font-size: 36rpx;
+			// height: 50rpx;
+			// line-height: 50rpx;
+			// width: calc(100% / 7);
+			// position: relative;
 			
 		}
 		.date-number-border_active{
@@ -329,10 +329,10 @@
 	}
 	.date-number{
 		margin-top: 14rpx;
-		.text{
-			padding: 8rpx 0;
-			margin-bottom: 22rpx;
-			color: $xd-text-color;
+		.my-text{
+			//padding: 8rpx 0;
+			//margin-bottom: 22rpx;
+		//	color: $xd-text-color;
 			font-weight: bold;
 			
 			&.active{
